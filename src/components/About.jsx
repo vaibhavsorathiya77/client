@@ -29,6 +29,7 @@ const About = () => {
   const paragraphStyle = {
     fontSize: "1.25rem", // Font size for paragraphs
     color: "#b0b0b0",
+    paddingRight:"166px",
     marginBottom: "1.5rem", // Spacing between paragraphs
     lineHeight: "1.6", // Line height for readability
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, Avenir, Helvetica, Arial, sans-serif", // Font family
@@ -41,6 +42,8 @@ const About = () => {
     lineHeight: "1.6",
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, Avenir, Helvetica, Arial, sans-serif", 
   };
+
+
 
   return (
     <section id="about" style={aboutStyle}>
@@ -62,7 +65,7 @@ const About = () => {
         <p style={paragraphStyle}>
           I’m a strong believer in the importance of family and friends, and I love spending time with them. Whether it’s playing games together or simply hanging out, these moments keep me grounded. I’m excited about the future of web development and the endless possibilities it holds!
         </p>
-
+{/*                            CONTACT SECTION                 */}
         <h2 style={headingStyle}>Contact</h2>
         
         <p style={paragraphStyle}>
@@ -74,20 +77,107 @@ const About = () => {
             <strong>Email: <u>ahirvaibhav77</u>@gmail.com</strong>
           </li>
           <li>
-            <a href="https://github.com/VaibhavAhir77">
+            <a style={{textDecoration:"none",color:"#FFD700"}} href="https://github.com/VaibhavAhir77">
               <strong>Github</strong>
             </a>
           </li>
         </ul>
-
+{/*                        DOING SECTION WHAT IM                                                          */}
         <h2 style={headingStyle}>What I'm Doing Now</h2>
         <p style={paragraphStyle}><em>Updated April 8th, 2025 </em></p>
 
         <ul style={ulStyle}>
           <li>Doing coding </li>
           <li>Playing video games</li>
+          <li>watching SUITS(TV-series)</li>
+        </ul>
+        {/*                          TOOLS SECTION                                   */}
+        <h2 style={headingStyle}>Tools</h2>
+        <h3 style={{fontSize:"2rem"}}>Software</h3>
+        <p  style={ paragraphStyle}>This website hosted on Netlify and uses the REACT framework</p>
+        <ul style={ulStyle}>
+        <li>Coding: <a style={{textDecoration:'none',color:'#FFD700'}} href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code </a></li>
         </ul>
 
+{/*                     SONGS SECTION       */}
+
+    <h2 style={headingStyle}>Songs</h2>
+    <ul style={ulStyle}>
+     <li>
+  <a 
+    style={{textDecoration: 'none', color: "#FFD700"}}
+    href="https://open.spotify.com/track/1di1BEgJYzPvXUuinsYJGP?si=c6dc45e3d5cf41db"
+    target="_blank"
+    rel="noopener noreferrer"
+    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+  >
+    Everybody
+  </a>
+</li>
+<li>
+  <a 
+    style={{textDecoration: 'none', color: "#FFD700"}}
+    href="https://open.spotify.com/track/7LPGJhkRDEW6KopWhD8DbX?si=9e1f9759c9564a22"
+    target="_blank"
+    rel="noopener noreferrer"
+    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+  >
+    Roi
+  </a>
+</li>
+<li>
+  <a 
+    style={{textDecoration: 'none', color: "#FFD700"}}
+    href="https://open.spotify.com/track/4bPF3oy4JsKK1UeMMn7Byf?si=70ef617971c34c43"
+    target="_blank"
+    rel="noopener noreferrer"
+    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+  >
+    Aaj ki Raat
+  </a>
+</li>
+<li>
+  <a 
+    style={{textDecoration: 'none', color: "#FFD700"}}
+    href="https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n?si=382c37821304440b"
+    target="_blank"
+    rel="noopener noreferrer"
+    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+  >
+    I Wanna Be Yours
+  </a>
+</li>
+<li>
+  <a 
+    style={{textDecoration: 'none', color: "#FFD700"}}
+    href="https://open.spotify.com/track/5R6T1zVAE6cpBorNs8MVGU?si=9000b8a3d5244390"
+    target="_blank"
+    rel="noopener noreferrer"
+    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+  >
+    Saat Samundar Paar
+  </a>
+</li>
+
+    </ul>
+    {/*               MISCELLEOUNS         */ }
+    <h2 style={headingStyle}>Miscellaneous</h2>
+    <ul style={ulStyle}>
+    <li>
+    <a
+    style={{textDecoration:"node",color:"#FFD700"}}
+    onMouseOver={(e)=>e.currentTarget.style.textDecoration="underline"}
+    onMouseOut={(e)=>e.currentTarget.style.textDecoration="none"}
+    >
+    Resume
+    </a>
+    </li>
+    </ul>
       </div>
     </section>
   );

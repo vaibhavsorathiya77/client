@@ -9,7 +9,14 @@ const Navbar = () => {
 
   // Prevent background scrolling when menu is open
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
+    if (isMobileMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  
+    // Optional: Cleanup when component unmounts
+    return () => document.body.classList.remove("no-scroll");
   }, [isMobileMenuOpen]);
 
   const navStyle = {
@@ -163,7 +170,7 @@ const Navbar = () => {
               justify-content: center;
               gap: 24px;
               z-index: 10000;
-              padding: 2rem;
+              padding: 1rem;
             }
           }
 

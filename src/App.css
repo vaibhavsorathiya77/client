@@ -73,6 +73,15 @@ nav a {
   overflow: hidden;
   
 }
+.no-scroll {
+  overflow: hidden;
+  touch-action: none; /* disables zooming/panning on mobile */
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 
 
 @media (min-width: 1024px) {

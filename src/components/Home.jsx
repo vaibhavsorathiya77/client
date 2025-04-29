@@ -21,36 +21,38 @@ const Home = () => {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-//     minHeight: "100vh", // changed from height to minHeight 
-//     zIndex: 0, // or just ensure nothing inside gets a z-index above the navbar
-// // position: "relative", // if not already present
+    minHeight: "100vh",
+    width: "100%",               // Ensure full width of the screen
+    overflowX: "hidden",         // Prevent horizontal scroll
+    overflowY: "auto",           // Allow vertical scrolling if content exceeds
   };
+  
 
   const contentBoxStyle = {
-    maxWidth: "800px",
-    width: "100%",
+    maxWidth: "800px",   // Prevent exceeding width on larger screens
+    width: "100%",       // Make sure it fits the available width
     textAlign: "left",
     padding: "2rem",
-    marginTop: "-3rem", // Pull content box upwards to fix spacing issue
+    marginTop: "-3rem",  // Pull content box upwards to fix spacing issue
     margin: "0 auto",
     display: "flex",
     flexDirection: "column", // Stack content vertically
     justifyContent: "center",
     alignItems: "flex-start", // Align to the left for larger screens
+    boxSizing: "border-box", // Ensure padding does not push out width
   };
 
   const headingStyle = {
     fontSize: "2.25rem",
     color: "#eeeeee",
-    marginTop: isMobile ? "1rem" : "clamp(1rem, 2.5vw, 15rem)", // fix for mobile
+    marginTop: isMobile ? "1rem" : "clamp(1rem, 2.5vw, 15rem)", // Adjust spacing based on screen size
     fontWeight: "bold",
     fontFamily: "'Sora', sans-serif",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    marginLeft: isDesktop ? "100px" : "0",
+    whiteSpace: "normal",        // Allow text wrapping if necessary
+    overflow: "visible",        // Ensure text is visible and not clipped
+    textOverflow: "clip",        // Avoid cutting off text
   };
-
+  
   // const paraStyle = {
   //   fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
   //   color: "#b0b0b0",
@@ -62,12 +64,13 @@ const Home = () => {
   // Project section card container style
   const cardContainerStyle = {
     display: "grid",
-    gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", // Adjust based on screen size
+    gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", // Single column on mobile, 2 columns on desktop
     gap: "20px",
     marginTop: "2rem",
-    maxWidth: "640px",
-    marginLeft: "auto",
-    marginRight: "auto",
+    maxWidth: "100%",         // Ensure it doesn't exceed viewport width
+    marginLeft: "auto",       // Center content horizontally
+    marginRight: "auto",      // Center content horizontally
+    padding: "0 10px",        // Add some padding to prevent clipping
   };
 
   // Glass card styles for each project card
@@ -79,9 +82,12 @@ const Home = () => {
     border: "1px solid rgba(255, 255, 255, 0.1)",
     padding: "20px",
     width: "280px",
+    maxWidth: "100%",
     color: "#ffffff",
     textAlign: "left",
     transition: "transform 0.3s ease",
+    boxSizing: "border-box",
+    margin: isMobile ? "0 auto" : "0",
   };
 
   const cardHeadingStyle = {

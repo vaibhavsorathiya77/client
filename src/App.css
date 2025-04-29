@@ -1,3 +1,8 @@
+* body{
+  margin: 0;
+  padding: 0;
+}
+
 #projects {
   background-color: #161b22;
   padding: 80px 20px;
@@ -59,3 +64,20 @@ nav a {
   margin: 0 auto;
 }
 
+.para {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #b0b0b0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  
+}
+
+
+@media (min-width: 1024px) {
+  .para {
+    width: 600px;
+    margin-left: 100px;
+  }
+}

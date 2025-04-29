@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  // Prevent background scrolling when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
+  }, [isMobileMenuOpen]);
 
   const navStyle = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 9999,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -22,7 +35,7 @@ const Navbar = () => {
   const linkStyle = {
     color: "#eeeeee",
     textDecoration: "none",
-    fontSize: "22px",
+    fontSize: isMobileMenuOpen ? "30px" : "22px",
     transition: "color 0.1s ease",
   };
 
@@ -45,7 +58,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={navStyle}>
+    <nav className="navbar" style={navStyle}>
       {/* Logo + Title */}
       <div style={logoContainerStyle}>
         <img src="/folderlogo.png" alt="Logo" width="30" height="30" />
@@ -60,19 +73,33 @@ const Navbar = () => {
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             vaibhav.dev
           </h1>
         </Link>
       </div>
 
-      {/* Links */}
-      <div style={linkContainerStyle}>
+      {/* Hamburger Icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+        {isMobileMenuOpen ? <FaTimes /> : "☰"}
+      </div>
+
+      {/* Nav Links */}
+      <div
+        className={`nav-links ${isMobileMenuOpen ? "mobile-open" : ""}`}
+        style={{
+          ...linkContainerStyle,
+          display: isMobileMenuOpen ? "flex" : "none",
+          flexDirection: isMobileMenuOpen ? "column" : "row",
+        }}
+      >
         <Link
           to="/about"
           style={linkStyle}
           onMouseEnter={(e) => (e.target.style.color = hoverStyle.color)}
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           About
         </Link>
@@ -81,6 +108,7 @@ const Navbar = () => {
           style={linkStyle}
           onMouseEnter={(e) => (e.target.style.color = hoverStyle.color)}
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           Projects
         </Link>
@@ -89,11 +117,10 @@ const Navbar = () => {
           style={linkStyle}
           onMouseEnter={(e) => (e.target.style.color = hoverStyle.color)}
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           Contact
         </Link>
-
-        {/* GitHub Icon */}
         <a
           href="https://github.com/VaibhavAhir77"
           target="_blank"
@@ -101,10 +128,59 @@ const Navbar = () => {
           style={iconStyle}
           onMouseEnter={(e) => (e.target.style.color = hoverStyle.color)}
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           <i className="fab fa-github"></i>
         </a>
       </div>
+
+      {/* Media Queries */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .hamburger {
+              display: block;
+              color: #eeeeee;
+              font-size: 28px;
+              cursor: pointer;
+              z-index: 10001;
+            }
+
+            .nav-links {
+              display: none;
+            }
+
+            .nav-links.mobile-open {
+              display: flex;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: #1E1E1E;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 24px;
+              z-index: 10000;
+              padding: 2rem;
+            }
+          }
+
+          @media (min-width: 769px) {
+            .hamburger {
+              display: none;
+            }
+
+            .nav-links {
+              display: flex !important;
+              flex-direction: row;
+              position: static;
+              padding: 0;
+            }
+          }
+        `}
+      </style>
     </nav>
   );
 };

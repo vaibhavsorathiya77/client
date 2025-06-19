@@ -2,6 +2,7 @@ import React from "react";
 import useIsMobile from "../responsive/Res";
 import DemoButton from "./Demo";
 import GithubButton from "./Github";
+import Footer from "./Footer";
 
 
 const Projects = () => {
@@ -69,13 +70,12 @@ const Projects = () => {
   const footerStyle={
     backgroundColor: "#1E1E1E",
     color: "#b0b0b0",
-    padding: "10px 20px",
+    padding: "2rem 1rem",
     textAlign: "center",
     fontFamily: "'Inter', sans-serif",
-    position: "relative",
-    bottom: "0",
     width: "100%",
     boxSizing: "border-box",
+    marginTop: "3rem",
   };
 
   const footerLinkStyle={
@@ -91,6 +91,7 @@ const Projects = () => {
   // };
 
   return (
+    <>
     <section id="projects" style={projectsStyle}>
       <h2 style={headingStyle}>Projects</h2>
       <p style={paragraphStyle}>
@@ -145,14 +146,9 @@ const Projects = () => {
         {/* {Glass Card 5} */}
       </div>
         {/* Footer Section */}
-        <footer style={footerStyle}>
-        <div style={{ borderTop: "1px solid #444", margin: "10px 0", width: "100%" }} />
-          <p>&copy; 2025 Vaibhav Sorathiya. All rights reserved. </p>
-          <p>
-        Designed and Developed by <a href="https://github.com/VaibhavAhir77" style={footerLinkStyle}>Vaibhav Ahir</a>
-      </p>
-        </footer>
     </section>
+      <Footer/>
+    </>
   );
 };
 

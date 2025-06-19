@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useIsMobile from "../responsive/Res";
 import GithubButton from "./Github";
 import DemoButton from "./Demo";
+import Footer from "./Footer";
 
 const Home = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
@@ -43,7 +44,7 @@ const Home = () => {
   };
 
   const headingStyle = {
-    fontSize: "2.25rem",
+    fontSize: "clamp(2rem, 5vw, 3rem)", 
     color: "#eeeeee",
     marginTop: isMobile ? "1rem" : "clamp(1rem, 2.5vw, 15rem)", // Adjust spacing based on screen size
     fontWeight: "bold",
@@ -62,18 +63,20 @@ const Home = () => {
   // };
 
   // Project section card container style
+ 
   const cardContainerStyle = {
     display: "grid",
-    gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", // Single column on mobile, 2 columns on desktop
+    gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
     gap: "20px",
     marginTop: "2rem",
-    maxWidth: "100%",         // Ensure it doesn't exceed viewport width
-    marginLeft: "auto",       // Center content horizontally
-    marginRight: "auto",      // Center content horizontally
-    padding: "0 10px",        // Add some padding to prevent clipping
+    maxWidth: "640px",
+    marginLeft: isMobile ? "-2rem" : "auto",
+    marginRight: isMobile ? "1rem" : "auto",
+    padding: "0", // or optional inner padding
+    width: "100%",
+    boxSizing: "border-box",
   };
 
-  // Glass card styles for each project card
   const glassCardStyle = {
     background: "rgba(0, 0, 0, 0.2)",
     borderRadius: "16px",
@@ -82,18 +85,15 @@ const Home = () => {
     border: "1px solid rgba(255, 255, 255, 0.1)",
     padding: "20px",
     width: "280px",
-    maxWidth: "100%",
     color: "#ffffff",
     textAlign: "left",
     transition: "transform 0.3s ease",
-    boxSizing: "border-box",
-    margin: isMobile ? "0 auto" : "0",
   };
 
   const cardHeadingStyle = {
     fontSize: "20px",
     marginBottom: "10px",
-    color: "#FFD700",
+    color:"#FFD700",
     fontFamily: "'Sora', sans-serif",
   };
 
@@ -104,7 +104,10 @@ const Home = () => {
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, Avenir, Helvetica, Arial, sans-serif",
   };
 
+
+
   return (
+    <>
     <section id="home" style={homeStyle}>
       <div style={contentBoxStyle}>
         {/* Heading Section */}
@@ -169,9 +172,14 @@ const Home = () => {
           </div>
         </div>
 
+        
+
         </div>
+ 
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

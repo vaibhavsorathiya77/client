@@ -1,5 +1,6 @@
 import React from "react";
 import useIsMobile from "../responsive/Res";
+import Footer from "./Footer";
 
 const About = () => {
   const isMobile = useIsMobile();
@@ -23,7 +24,7 @@ const About = () => {
   };
 
   const headingStyle = {
-    fontSize: "clamp(2.5rem, 5vw, 3rem)", // scales between 2.5rem and 3rem
+    fontSize: "clamp(2rem, 5vw, 3rem)", // scales between 2.5rem and 3rem
     color: "#eeeeee",
     marginBottom: "1.5rem",
     fontFamily: "'Sora', sans-serif",
@@ -55,7 +56,25 @@ const About = () => {
     textDecoration: "underline",
   };
 
+  const footerStyle={
+    backgroundColor: "#1E1E1E",
+    color: "#b0b0b0",
+    padding: "2rem 1rem",
+    textAlign: "center",
+    fontFamily: "'Inter', sans-serif",
+    width: "100%",
+    boxSizing: "border-box",
+    marginTop: isMobile ? "3rem" : "",
+    margin: "3rem auto 0", // centers on all screens
+  };
+
+  const footerLinkStyle={
+    color: "#FFD700",
+    textDecoration: "none",
+  };
+
   return (
+      <>
     <section id="about" style={aboutStyle}>
       <div style={contentBoxStyle}>
         <h2 style={headingStyle}>About Me</h2>
@@ -117,7 +136,7 @@ const About = () => {
           </li>
         </ul>
 
-        <h2 style={headingStyle}>Songs</h2>
+        {/* <h2 style={headingStyle}>Songs</h2>
 
         <ul style={ulStyle}>
           {[
@@ -140,7 +159,7 @@ const About = () => {
               </a>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         <h2 style={headingStyle}>Miscellaneous</h2>
 
@@ -151,12 +170,15 @@ const About = () => {
               Resume
             </a>
           </li>
-          <li>
+          {/* <li>
             Fast and accurate typing: <span style={{ ...paragraphStyle, color: "#FFD700" }}>60 WPM with 94% accuracy</span>
-          </li>
+          </li> */}
         </ul>
       </div>
+
     </section>
+    <Footer/>
+    </>
   );
 };
 

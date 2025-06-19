@@ -18,12 +18,12 @@ const Navbar = () => {
     // Optional: Cleanup when component unmounts
     return () => document.body.classList.remove("no-scroll");
   }, [isMobileMenuOpen]);
-
+  const isMobile = window.innerWidth <= 768;
   const navStyle = {
     position: "fixed",
     top: 0,
     left: 0,
-    right: 0,
+    right: isMobile?"5px":"20px", //here right 20px moves the nav to right 
     zIndex: 9999,
     display: "flex",
     justifyContent: "space-between",
@@ -66,10 +66,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" style={navStyle}>
+
+
       {/* Logo + Title */}
+        <Link to="/" style={{ textDecoration: "none" }}>
       <div style={logoContainerStyle}>
         <img src="/folderlogo.png" alt="Logo" width="30" height="30" />
-        <Link to="/" style={{ textDecoration: "none" }}>
           <h1
             style={{
               color: "#eeeeee",
@@ -84,8 +86,8 @@ const Navbar = () => {
           >
             vaibhav.dev
           </h1>
-        </Link>
       </div>
+        </Link>
 
       {/* Hamburger Icon */}
       <div className="hamburger" onClick={toggleMenu}>
@@ -108,7 +110,7 @@ const Navbar = () => {
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          About
+         <img src="/aboutlogo.ico" alt="Logo" width="15" height="15"  />  About
         </Link>
         <Link
           to="/projects"
@@ -117,7 +119,7 @@ const Navbar = () => {
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          Projects
+            <img src="/codelogo.ico" alt="" width="15" height="15" /> Projects
         </Link>
         <Link
           to="/contact"
@@ -126,7 +128,7 @@ const Navbar = () => {
           onMouseLeave={(e) => (e.target.style.color = "#eeeeee")}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          Contact
+       <img src="contact-1.png" alt="logo" width="15" height="15" />   Contact
         </Link>
         <a
           href="https://github.com/VaibhavAhir77"
@@ -139,6 +141,7 @@ const Navbar = () => {
         >
           <i className="fab fa-github"></i>
         </a>
+
       </div>
 
       {/* Media Queries */}
@@ -160,17 +163,18 @@ const Navbar = () => {
             .nav-links.mobile-open {
               display: flex;
               position: fixed;
-              top: 0;
+              top: 62px;
               left: 0;
               width: 100vw;
               height: 100vh;
               background-color: #1E1E1E;
               flex-direction: column;
               align-items: center;
-              justify-content: center;
+              justify-content: flex-start;
               gap: 24px;
               z-index: 10000;
               padding: 1rem;
+              padding-top: 80px;
             }
           }
 

@@ -113,7 +113,7 @@ const Home = () => {
         {/* Heading Section */}
         <h1 style={headingStyle}>Hey, I craft code.!</h1>
         <p className="para">
-          I'm a MERN stack developer and a former professional footballer. I've been building websites since 2023.
+          Building websites since 2023 with a background as a former professional footballer.
         </p>
         <p className="para">
           When I'm not coding, you'll probably find me watching sci-fi and fantasy movies, playing video games, and spending time with my family and friends.

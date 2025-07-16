@@ -19,12 +19,19 @@ const Contact = () => {
 
   return (
     <>
-    <section id="contact" style={contactStyle}>
-    <h2 style={{ color: "#eeeeee", }}>Contact Me</h2>
-    <p style={{ color: "#b0b0b0", fontSize: "20px" }}>
-      Email: ahirvaibhav77@gmail.com    
-    </p>
-  </section>
+<section id="contact" style={contactStyle}>
+  <h2 style={{ color: "#eeeeee" }}>Contact Me</h2>
+  <p style={{ color: "#b0b0b0", fontSize: "20px" }}>
+    Email:{" "}
+    <a
+      href="mailto:ahirvaibhav77@gmail.com"
+      style={{ color: "#b0b0b0", textDecoration: "none", cursor: "pointer" }}
+    >
+      ahirvaibhav77@gmail.com
+    </a>
+  </p>
+</section>
+
     <Footer/>
     </>
   );

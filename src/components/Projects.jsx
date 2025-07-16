@@ -67,21 +67,21 @@ const Projects = () => {
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, Avenir, Helvetica, Arial, sans-serif",
   };
 
-  const footerStyle={
-    backgroundColor: "#1E1E1E",
-    color: "#b0b0b0",
-    padding: "2rem 1rem",
-    textAlign: "center",
-    fontFamily: "'Inter', sans-serif",
-    width: "100%",
-    boxSizing: "border-box",
-    marginTop: "3rem",
-  };
+  // const footerStyle={
+  //   backgroundColor: "#1E1E1E",
+  //   color: "#b0b0b0",
+  //   padding: "2rem 1rem",
+  //   textAlign: "center",
+  //   fontFamily: "'Inter', sans-serif",
+  //   width: "100%",
+  //   boxSizing: "border-box",
+  //   marginTop: "3rem",
+  // };
 
-  const footerLinkStyle={
-    color: "#FFD700",
-    textDecoration: "none",
-  };
+  // const footerLinkStyle={
+  //   color: "#FFD700",
+  //   textDecoration: "none",
+  // };
 
   // const hrStyle = {
   //   border: "0",
@@ -116,7 +116,7 @@ const Projects = () => {
           </p>
           {/* Container for buttons */}
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem", justifyContent: "left" }}>
-            <GithubButton link="https://github.com/VaibhavAhir77/expense-tracker" text="Source" />
+            <GithubButton link="https://github.com/vaibhavsorathiya77/expense-tracker" text="Source" />
             <DemoButton link="https://expensetracker-vs7.netlify.app " text="Demo"/>
           </div>
         </div>
@@ -127,7 +127,7 @@ const Projects = () => {
           No Bad Surprises.
           </p>
           <div style={{display:"flex", gap:"1rem", marginTop:"1rem", justifyContent:"left"}}>
-            <GithubButton link="https://github.com/VaibhavAhir77/Weather_App" text="Source"/>
+            <GithubButton link="https://github.com/vaibhavsorathiya77/Weather_App" text="Source"/>
             <DemoButton link="https://vaibhavahir77.github.io/Weather_App/" text="Demo"/>
           </div>
         </div>
@@ -139,7 +139,7 @@ const Projects = () => {
           No Hassle, Just Movies.
           </p>
           <div style={{display:"flex", gap:"1rem",marginTop:"1rem", justifyContent:"left"}}>
-            <GithubButton link="https://github.com/VaibhavAhir77/MoviesLovers" text="Source"/>
+            <GithubButton link="https://github.com/vaibhavsorathiya77/MoviesLovers" text="Source"/>
             <DemoButton link="https://moviesloversbyv.netlify.app/" text="Demo"/>
           </div>
         </div>

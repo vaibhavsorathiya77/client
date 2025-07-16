@@ -106,7 +106,7 @@ const About = () => {
             <strong>Email: <u>ahirvaibhav77</u>@gmail.com</strong>
           </li>
           <li>
-            <a href="https://github.com/VaibhavAhir77" style={linkStyle} target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/vaibhavsorathiya77" style={linkStyle} target="_blank" rel="noopener noreferrer">
               <strong>Github</strong>
             </a>
           </li>
@@ -114,7 +114,7 @@ const About = () => {
 
         <h2 style={headingStyle}>What I'm Doing Now</h2>
 
-        <p style={paragraphStyle}><em>Updated April 8th, 2025</em></p>
+        <p style={paragraphStyle}><em>Updated July 13th, 2025</em></p>
 
         <ul style={ulStyle}>
           <li>Doing coding</li>
@@ -164,12 +164,19 @@ const About = () => {
         <h2 style={headingStyle}>Miscellaneous</h2>
 
         <ul style={ulStyle}>
-          <li>
-            Access Resume:{" "}
-            <a href="#" style={linkStyle} onMouseOver={(e) => e.currentTarget.style.textDecoration = "underline"} onMouseOut={(e) => e.currentTarget.style.textDecoration = "none"}>
-              Resume
-            </a>
-          </li>
+   <li>
+    Access Resume:{" "}
+    <a
+      href="/Vaibhav_Sorathiya.pdf"
+      // href="/Vaibhav_Sorathiya.pdf"
+      // download="Vaibhav_Sorathiya_Resume.pdf"
+      style={linkStyle}
+      onMouseOver={(e) => e.currentTarget.style.textDecoration = "underline"}
+      onMouseOut={(e) => e.currentTarget.style.textDecoration = "none"}
+    >
+      Resume
+    </a>
+  </li>
           {/* <li>
             Fast and accurate typing: <span style={{ ...paragraphStyle, color: "#FFD700" }}>60 WPM with 94% accuracy</span>
           </li> */}

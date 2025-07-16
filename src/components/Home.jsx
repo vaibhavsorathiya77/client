@@ -142,7 +142,7 @@ const Home = () => {
           </p>
           {/* Container for buttons */}
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem", justifyContent: "left" }}>
-            <GithubButton link="https://github.com/VaibhavAhir77/expense-tracker" text="Source" />
+            <GithubButton link="https://github.com/vaibhavsorathiya77/expense-tracker" text="Source" />
             <DemoButton link="https://expensetracker-vs7.netlify.app " text="Demo"/>
           </div>
         </div>
@@ -154,7 +154,7 @@ const Home = () => {
           No Bad Surprises.
           </p>
           <div style={{display:"flex", gap:"1rem", marginTop:"1rem", justifyContent:"left"}}>
-            <GithubButton link="https://github.com/VaibhavAhir77/Weather_App" text="Source"/>
+            <GithubButton link="https://github.com/vaibhavsorathiya77/Weather_App" text="Source"/>
             <DemoButton link="https://vaibhavahir77.github.io/Weather_App/" text="Demo"/>
           </div>
         </div>
@@ -167,7 +167,7 @@ const Home = () => {
           No Hassle, Just Movies.
           </p>
           <div style={{display:"flex", gap:"1rem",marginTop:"1rem", justifyContent:"left"}}>
-            <GithubButton link="https://github.com/VaibhavAhir77/MoviesLovers" text="Source"/>
+            <GithubButton link="https://github.com/vaibhavsorathiya77/MoviesLovers" text="Source"/>
             <DemoButton link="https://moviesloversbyv.netlify.app/" text="Demo"/>
           </div>
         </div>

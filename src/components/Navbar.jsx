@@ -131,7 +131,7 @@ const Navbar = () => {
        <img src="contact-1.png" alt="logo" width="15" height="15" />   Contact
         </Link>
         <a
-          href="https://github.com/VaibhavAhir77"
+          href="https://github.com/vaibhavsorathiya77"
           target="_blank"
           rel="noopener noreferrer"
           style={iconStyle}

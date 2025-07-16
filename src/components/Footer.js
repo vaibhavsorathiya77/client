@@ -23,7 +23,7 @@ const Footer=()=>{
           <p>&copy; 2025 Vaibhav Sorathiya. All rights reserved.</p>
           <p>
             Designed and Developed by{" "}
-            <a href="https://github.com/VaibhavAhir77" style={footerLinkStyle}>
+            <a href="https://github.com/vaibhavsorathiya77" style={footerLinkStyle}>
               Vaibhav Sorathiya
             </a>
           </p>

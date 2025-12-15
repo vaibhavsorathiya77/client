@@ -167,7 +167,7 @@ const About = () => {
    <li>
     Access Resume:{" "}
     <a
-      href="/Vaibhav_Sorathiya.pdf"
+      href="/Vaibhav_Sorathiya_Resume.pdf"
       // href="/Vaibhav_Sorathiya.pdf"
       // download="Vaibhav_Sorathiya_Resume.pdf"
       style={linkStyle}

@@ -80,7 +80,7 @@ const About = () => {
         <h2 style={headingStyle}>About Me</h2>
 
         <p style={paragraphStyle}>
-          Hi, I’m Nishit Sorathiya I’ve been crafting websites since 2023, focusing on web development technologies and continuously learning new ways to build intuitive, dynamic user experiences.
+          Hi, I’m Vaibhav Sorathiya I’ve been crafting websites since 2023, focusing on web development technologies and continuously learning new ways to build intuitive, dynamic user experiences.
         </p>
 
         <p style={paragraphStyle}>

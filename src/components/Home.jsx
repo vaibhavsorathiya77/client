@@ -111,7 +111,7 @@ const Home = () => {
     <section id="home" style={homeStyle}>
       <div style={contentBoxStyle}>
         {/* Heading Section */}
-        <h1 style={headingStyle}>Hey, I craft code.!</h1>
+        <h1 style={headingStyle}>Hey, Paresh aa che mari website!</h1>
         <p className="para">
           Building websites since 2023 with a background as a former professional footballer.
         </p>
